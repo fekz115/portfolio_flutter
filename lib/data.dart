@@ -2,6 +2,7 @@ import 'package:portfolio_flutter/model/info_item.dart';
 import 'package:portfolio_flutter/model/knowledge.dart';
 import 'package:portfolio_flutter/model/person_info.dart';
 import 'package:portfolio_flutter/model/skill.dart';
+import 'package:portfolio_flutter/model/speciality.dart';
 
 final personInfo = PersonInfo(
   description: 'Flutter Developer, Android/Linux Enthusiast',
@@ -37,5 +38,19 @@ final personInfo = PersonInfo(
     const Knowledge(name: 'Various patterns and best practices'),
     const Knowledge(name: 'SOLID, KISS, DRY'),
     const Knowledge(name: 'OOP'),
+  ],
+  specialties: const [
+    Speciality(
+      name: 'Android/Linux Enthusiast',
+      description: 'Building kernel, android roms for phones...',
+    ),
+    Speciality(
+      name: 'Flutter Developer',
+      description: 'Statemanagement, 60fps, widgets...',
+    ),
+    Speciality(
+      name: 'Java/Kotlin Backend Developer',
+      description: 'Spring, databases, docker...',
+    ),
   ],
 );

@@ -1,6 +1,7 @@
 import 'package:portfolio_flutter/model/info_item.dart';
 import 'package:portfolio_flutter/model/knowledge.dart';
 import 'package:portfolio_flutter/model/skill.dart';
+import 'package:portfolio_flutter/model/speciality.dart';
 
 class PersonInfo {
   final String? avatarUrl;
@@ -14,6 +15,7 @@ class PersonInfo {
   final List<InfoItem>? additionalInfoItems;
   final List<Skill>? skills;
   final List<Knowledge>? knowledge;
+  final List<Speciality>? specialties;
 
   PersonInfo({
     this.avatarUrl,
@@ -27,5 +29,6 @@ class PersonInfo {
     this.additionalInfoItems,
     this.skills,
     this.knowledge,
+    this.specialties,
   });
 }
