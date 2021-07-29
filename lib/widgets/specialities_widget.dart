@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_flutter/model/speciality.dart';
+import 'package:portfolio_flutter/screens/speciality_screen.dart';
 import 'package:portfolio_flutter/widgets/speciality_card_widget.dart';
 
 class SpecialitiesWidget extends StatelessWidget {
@@ -33,6 +34,15 @@ class SpecialitiesWidget extends StatelessWidget {
                 (e) => SpecialityCard(
                   name: e.name,
                   description: e.description,
+                  onClick: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (BuildContext context) => SpecialityScreen(
+                          speciality: e,
+                        ),
+                      ),
+                    );
+                  },
                 ),
               )
               .toList(),
