@@ -11,6 +11,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_svg: ^0.22.0
+  url_launcher: ^6.0.9
 
 dev_dependencies:
   flutter_test:
@@ -21,4 +23,5 @@ flutter:
   uses-material-design: true
   assets:
     - images/background/
+    - images/logo/
     - images/
