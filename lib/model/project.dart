@@ -6,7 +6,7 @@ class Project {
   const Project({
     required this.name,
     required this.description,
-    required this.link,
+    this.link,
     this.features,
     required this.progress,
     required this.status,
@@ -15,7 +15,7 @@ class Project {
 
   final String name;
   final String description;
-  final String link;
+  final String? link;
   final List<ProjectFeature>? features;
   final double progress;
   final ProjectStatus status;

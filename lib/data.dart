@@ -181,7 +181,6 @@ final personInfo = PersonInfo(
         Project(
           name: 'Inspector App (ЕИС ОАТИ)',
           description: 'This app is for internal Moscow landscaping service. This project is my recent work.',
-          link: 'https://https://github.com/hardDays/InspectorApp',
           status: ProjectStatus.completed,
           progress: 1,
           features: [
