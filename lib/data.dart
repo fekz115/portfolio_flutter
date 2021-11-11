@@ -72,6 +72,8 @@ const personInfo = PersonInfo(
     Speciality(
       name: 'Flutter Developer',
       description: 'State-management, 60fps, widgets...',
+      additionalInfo:
+          'This is my main speciality, so not all my projects are\npresented here, you can ask me in pm for others.',
       technologies: {
         'Linter': [
           Technology(

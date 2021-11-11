@@ -11,6 +11,7 @@ class Speciality {
     this.technologies,
     this.projects,
     required this.style,
+    this.additionalInfo,
   });
 
   final String name;
@@ -19,4 +20,5 @@ class Speciality {
   final Map<String, List<Technology>>? technologies;
   final List<Project>? projects;
   final ScreenStyle style;
+  final String? additionalInfo;
 }

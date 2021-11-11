@@ -39,6 +39,13 @@ class SpecialityScreen extends StatelessWidget {
                             ),
                           ),
                         ),
+                        if (speciality.additionalInfo != null)
+                          Text(
+                            speciality.additionalInfo!,
+                            style: const TextStyle(
+                              fontSize: 18,
+                            ),
+                          ),
                         if (speciality.specialityPoints != null &&
                             speciality.specialityPoints!.isNotEmpty)
                           SizedBox(
