@@ -4,6 +4,7 @@ import 'package:portfolio_flutter/model/person_info.dart';
 import 'package:portfolio_flutter/model/project.dart';
 import 'package:portfolio_flutter/model/project_feature.dart';
 import 'package:portfolio_flutter/model/project_status.dart';
+import 'package:portfolio_flutter/model/screen_style.dart';
 import 'package:portfolio_flutter/model/skill.dart';
 import 'package:portfolio_flutter/model/speciality.dart';
 import 'package:portfolio_flutter/model/technology.dart';
@@ -47,11 +48,27 @@ final personInfo = PersonInfo(
     Knowledge(name: 'SOLID, KISS, DRY'),
     Knowledge(name: 'OOP'),
   ],
+  style: const ScreenStyle(
+    background: 'images/background/main_screen_background.jpg',
+    backgroundColor: 0xFFbdbdbd,
+    primary: 0xFF455A64,
+    primaryVariant: 0xFF607D8B,
+    secondary: 0xFF424242,
+    secondaryVariant: 0xFF616161,
+  ),
   specialties: const [
-    // Speciality(
-    //   name: 'Android/Linux Enthusiast',
-    //   description: 'Building kernel, android roms for phones...',
-    // ),
+    Speciality(
+      name: 'Android/Linux Enthusiast',
+      description: 'Building kernel, android roms for phones...',
+      style: ScreenStyle(
+        background: 'images/background/android_screen_background.jpg',
+        backgroundColor: 0xFF3E2723,
+        primary: 0xFFF48FB1,
+        primaryVariant: 0xFFAD1457,
+        secondary: 0xFF7986CB,
+        secondaryVariant: 0xFF9E9E9E,
+      ),
+    ),
     Speciality(
       name: 'Flutter Developer',
       description: 'State-management, 60fps, widgets...',
@@ -180,7 +197,8 @@ final personInfo = PersonInfo(
         ),
         Project(
           name: 'Inspector App (ЕИС ОАТИ)',
-          description: 'This app is for internal Moscow landscaping service. This project is my recent work.',
+          description:
+              'This app is for internal Moscow landscaping service. This project is my recent work.',
           status: ProjectStatus.completed,
           progress: 1,
           features: [
@@ -191,13 +209,15 @@ final personInfo = PersonInfo(
               value: 'Uses dio as http-client',
             ),
             ProjectFeature(
-              value: 'Have 2 types of databases: for large data and small, like user settings',
+              value:
+                  'Have 2 types of databases: for large data and small, like user settings',
             ),
             ProjectFeature(
               value: 'Uses map',
             ),
             ProjectFeature(
-              value: 'Uses freezed for data-classes in part which written by me',
+              value:
+                  'Uses freezed for data-classes in part which written by me',
             ),
           ],
         ),
@@ -227,10 +247,26 @@ final personInfo = PersonInfo(
           ],
         ),
       ],
+      style: ScreenStyle(
+        background: 'images/background/flutter_screen_background.jpg',
+        backgroundColor: 0xFFCFD8DC,
+        primary: 0xFF263238,
+        primaryVariant: 0xFF4DB6AC,
+        secondary: 0xFF757575,
+        secondaryVariant: 0xFF78909C,
+      ),
     ),
-    // Speciality(
-    //   name: 'Java/Kotlin Backend Developer',
-    //   description: 'Spring, databases, docker...',
-    // ),
+    Speciality(
+      name: 'Java/Kotlin Backend Developer',
+      description: 'Spring, databases, docker...',
+      style: ScreenStyle(
+        background: 'images/background/spring_screen_background.jpg',
+        backgroundColor: 0xFF212121,
+        primary: 0xFFBCAAA4,
+        primaryVariant: 0xFF616161,
+        secondary: 0xFF78909c,
+        secondaryVariant: 0xFF78909c,
+      ),
+    ),
   ],
 );

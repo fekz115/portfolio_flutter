@@ -1,5 +1,6 @@
 import 'package:portfolio_flutter/model/info_item.dart';
 import 'package:portfolio_flutter/model/knowledge.dart';
+import 'package:portfolio_flutter/model/screen_style.dart';
 import 'package:portfolio_flutter/model/skill.dart';
 import 'package:portfolio_flutter/model/speciality.dart';
 
@@ -16,6 +17,7 @@ class PersonInfo {
   final List<Skill>? skills;
   final List<Knowledge>? knowledge;
   final List<Speciality>? specialties;
+  final ScreenStyle style;
 
   PersonInfo({
     this.avatarUrl,
@@ -30,5 +32,6 @@ class PersonInfo {
     this.skills,
     this.knowledge,
     this.specialties,
+    required this.style,
   });
 }
