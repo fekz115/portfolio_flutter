@@ -19,7 +19,7 @@ class PersonInfo {
   final List<Speciality>? specialties;
   final ScreenStyle style;
 
-  PersonInfo({
+  const PersonInfo({
     this.avatarUrl,
     required this.firstName,
     required this.lastName,

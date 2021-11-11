@@ -9,7 +9,7 @@ import 'package:portfolio_flutter/model/skill.dart';
 import 'package:portfolio_flutter/model/speciality.dart';
 import 'package:portfolio_flutter/model/technology.dart';
 
-final personInfo = PersonInfo(
+const personInfo = PersonInfo(
   description: 'Flutter Developer, Android/Linux Enthusiast',
   firstName: 'Eugene',
   lastName: 'Lepshi',
@@ -17,7 +17,7 @@ final personInfo = PersonInfo(
   city: 'Gomel',
   country: 'Belarus',
   timeZone: 'GMT +3',
-  skills: const [
+  skills: [
     Skill(
       name: 'Dart',
       value: 0.79,
@@ -31,7 +31,7 @@ final personInfo = PersonInfo(
       value: 0.68,
     ),
   ],
-  additionalInfoItems: const [
+  additionalInfoItems: [
     InfoItem(
       name: 'Languages',
       value: 'RU, EN(A2+)',
@@ -41,14 +41,14 @@ final personInfo = PersonInfo(
       value: 'GSTU n.a. P.O. Sukhoi, IaPT, 2021',
     ),
   ],
-  knowledge: const [
+  knowledge: [
     Knowledge(name: 'Using GIT'),
     Knowledge(name: 'Always use commitizen to format commit message'),
     Knowledge(name: 'Various patterns and best practices'),
     Knowledge(name: 'SOLID, KISS, DRY'),
     Knowledge(name: 'OOP'),
   ],
-  style: const ScreenStyle(
+  style: ScreenStyle(
     background: 'images/background/main_screen_background.jpg',
     backgroundColor: 0xFFbdbdbd,
     primary: 0xFF455A64,
@@ -56,7 +56,7 @@ final personInfo = PersonInfo(
     secondary: 0xFF424242,
     secondaryVariant: 0xFF616161,
   ),
-  specialties: const [
+  specialties: [
     Speciality(
       name: 'Android/Linux Enthusiast',
       description: 'Building kernel, android roms for phones...',

@@ -22,7 +22,7 @@ class MainScreen extends StatelessWidget {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                InfoWidget(
+                const InfoWidget(
                   personInfo: personInfo,
                 ),
                 if (personInfo.specialties != null &&
