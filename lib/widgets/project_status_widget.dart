@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:portfolio_flutter/model/project.dart';
 import 'package:portfolio_flutter/model/project_status.dart';

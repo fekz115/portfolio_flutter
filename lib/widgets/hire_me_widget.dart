@@ -4,7 +4,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 class HireMeWidget extends StatelessWidget {
   const HireMeWidget({
-    Key? key, 
+    Key? key,
     this.mailSubject = 'Job',
   }) : super(key: key);
 
@@ -49,7 +49,8 @@ class HireMeWidget extends StatelessWidget {
                       icon: SvgPicture.asset('images/logo/gmail.svg'),
                       onPressed: () async {
                         await launch(
-                            'https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=fekz115@gmail.com&su=Flutter%20Developer%20Job');
+                          'https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=fekz115@gmail.com&su=Flutter%20Developer%20Job',
+                        );
                       },
                     ),
                     IconButton(
