@@ -18,17 +18,12 @@ class SpecialityPointWidget extends StatelessWidget {
         children: [
           SelectableText(
             '$name:',
-            style: const TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.w600,
-            ),
+            style: Theme.of(context).textTheme.headline6,
           ),
           const Spacer(),
           SelectableText(
             value,
-            style: const TextStyle(
-              fontSize: 18,
-            ),
+            style: Theme.of(context).textTheme.subtitle1,
           ),
         ],
       ),

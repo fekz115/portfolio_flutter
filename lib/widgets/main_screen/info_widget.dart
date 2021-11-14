@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_flutter/model/person_info.dart';
-import 'package:portfolio_flutter/widgets/about_me_section_widget.dart';
-import 'package:portfolio_flutter/widgets/avatar_widget.dart';
-import 'package:portfolio_flutter/widgets/knowledge_widget.dart';
-import 'package:portfolio_flutter/widgets/name_widget.dart';
-import 'package:portfolio_flutter/widgets/skills_widget.dart';
+import 'package:portfolio_flutter/widgets/main_screen/about_me_section_widget.dart';
+import 'package:portfolio_flutter/widgets/main_screen/avatar_widget.dart';
+import 'package:portfolio_flutter/widgets/main_screen/knowledge_widget.dart';
+import 'package:portfolio_flutter/widgets/main_screen/name_widget.dart';
+import 'package:portfolio_flutter/widgets/main_screen/skills_widget.dart';
 
 class InfoWidget extends StatelessWidget {
   const InfoWidget({

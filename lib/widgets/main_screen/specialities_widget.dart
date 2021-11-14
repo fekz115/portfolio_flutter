@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_flutter/model/speciality.dart';
 import 'package:portfolio_flutter/screens/speciality_screen.dart';
-import 'package:portfolio_flutter/widgets/speciality_card_widget.dart';
+import 'package:portfolio_flutter/widgets/main_screen/speciality_card_widget.dart';
 
 class SpecialitiesWidget extends StatelessWidget {
   const SpecialitiesWidget({
@@ -15,17 +15,14 @@ class SpecialitiesWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const Padding(
-          padding: EdgeInsets.only(
+        Padding(
+          padding: const EdgeInsets.only(
             top: 20,
             bottom: 10,
           ),
           child: Text(
             'You wanna see me as:',
-            style: TextStyle(
-              fontSize: 22,
-              fontWeight: FontWeight.w600,
-            ),
+            style: Theme.of(context).textTheme.headline5,
           ),
         ),
         Wrap(

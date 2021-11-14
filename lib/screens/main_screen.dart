@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_flutter/data.dart';
-import 'package:portfolio_flutter/widgets/hire_me_widget.dart';
-import 'package:portfolio_flutter/widgets/info_widget.dart';
-import 'package:portfolio_flutter/widgets/screen_skeleton.dart';
-import 'package:portfolio_flutter/widgets/specialities_widget.dart';
+import 'package:portfolio_flutter/widgets/common/links_widget.dart';
+import 'package:portfolio_flutter/widgets/common/screen_skeleton.dart';
+import 'package:portfolio_flutter/widgets/main_screen/info_widget.dart';
+import 'package:portfolio_flutter/widgets/main_screen/specialities_widget.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({
@@ -15,8 +15,8 @@ class MainScreen extends StatelessWidget {
     return Scaffold(
       body: ScreenSkeleton(
         style: personInfo.style,
-        child: SingleChildScrollView(
-          padding: const EdgeInsets.all(30),
+        child: Padding(
+          padding: const EdgeInsets.all(20.0),
           child: SizedBox(
             width: double.infinity,
             child: Column(
@@ -30,7 +30,10 @@ class MainScreen extends StatelessWidget {
                   SpecialitiesWidget(
                     specialities: personInfo.specialties!,
                   ),
-                const HireMeWidget(),
+                const SizedBox(
+                  height: 15,
+                ),
+                const LinksWidget(),
               ],
             ),
           ),

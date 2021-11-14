@@ -19,14 +19,11 @@ class TechnologiesWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,
         children: [
-          const Padding(
-            padding: EdgeInsets.all(16.0),
+          Padding(
+            padding: const EdgeInsets.all(16.0),
             child: Text(
               'Technologies',
-              style: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.w600,
-              ),
+              style: Theme.of(context).textTheme.headline6,
             ),
           ),
           ...technologies.entries
@@ -35,18 +32,12 @@ class TechnologiesWidget extends StatelessWidget {
                   children: [
                     SelectableText(
                       '${e.key}:',
-                      style: const TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.w600,
-                      ),
+                      style: Theme.of(context).textTheme.subtitle1,
                     ),
                     const Spacer(),
                     RichText(
                       text: TextSpan(
-                        style: const TextStyle(
-                          color: Colors.black,
-                          fontSize: 16,
-                        ),
+                        style: Theme.of(context).textTheme.subtitle1,
                         children: e.value
                             .map(
                               (e) => [
@@ -59,15 +50,17 @@ class TechnologiesWidget extends StatelessWidget {
                                         await launch(e.link!);
                                       }
                                     },
-                                  style: TextStyle(
-                                    color: e.link != null
-                                        ? Colors.indigo
-                                        : Colors.black,
-                                    decoration: e.link != null
-                                        ? TextDecoration.underline
-                                        : TextDecoration.none,
-                                    fontSize: 16,
-                                  ),
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .subtitle1
+                                      ?.copyWith(
+                                        color: e.link != null
+                                            ? Colors.indigo
+                                            : null,
+                                        decoration: e.link != null
+                                            ? TextDecoration.underline
+                                            : TextDecoration.none,
+                                      ),
                                 ),
                               ],
                             )

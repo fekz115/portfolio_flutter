@@ -15,10 +15,10 @@ class ProjectStatusWidget extends StatelessWidget {
     var color = Theme.of(context).indicatorColor;
     switch (project.status) {
       case ProjectStatus.inDevelopment:
-        color = Colors.blue[900] ?? color;
+        color = Colors.blue[600] ?? color;
         break;
       case ProjectStatus.frozen:
-        color = Colors.grey[800] ?? color;
+        color = Theme.of(context).disabledColor;
         break;
       case ProjectStatus.completed:
         color = Colors.green[600] ?? color;
