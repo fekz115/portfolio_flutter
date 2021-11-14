@@ -19,7 +19,10 @@ class FeatureWidget extends StatelessWidget {
           width: 4,
         ),
         Flexible(
-          child: Text(value),
+          child: Text(
+            value,
+            style: Theme.of(context).textTheme.subtitle2,
+          ),
         ),
       ],
     );
