@@ -25,50 +25,53 @@ class SpecialityScreen extends StatelessWidget {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Card(
-                  child: Padding(
-                    padding: const EdgeInsets.all(30.0),
-                    child: Column(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(bottom: 10.0),
-                          child: Text(
-                            speciality.name,
-                            style: const TextStyle(
-                              fontSize: 24,
-                              fontWeight: FontWeight.w600,
+                Hero(
+                  tag: speciality.name,
+                  child: Card(
+                    child: Padding(
+                      padding: const EdgeInsets.all(30.0),
+                      child: Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(bottom: 10.0),
+                            child: Text(
+                              speciality.name,
+                              style: const TextStyle(
+                                fontSize: 24,
+                                fontWeight: FontWeight.w600,
+                              ),
                             ),
                           ),
-                        ),
-                        if (speciality.additionalInfo != null)
-                          Text(
-                            speciality.additionalInfo!,
-                            style: const TextStyle(
-                              fontSize: 18,
+                          if (speciality.additionalInfo != null)
+                            Text(
+                              speciality.additionalInfo!,
+                              style: const TextStyle(
+                                fontSize: 18,
+                              ),
                             ),
-                          ),
-                        if (speciality.specialityPoints != null &&
-                            speciality.specialityPoints!.isNotEmpty)
-                          SizedBox(
-                            width: 170,
-                            child: Column(
-                              mainAxisSize: MainAxisSize.min,
-                              children: speciality.specialityPoints!
-                                  .map(
-                                    (e) => SpecialityPointWidget(
-                                      name: e.name,
-                                      value: e.value,
-                                    ),
-                                  )
-                                  .toList(),
+                          if (speciality.specialityPoints != null &&
+                              speciality.specialityPoints!.isNotEmpty)
+                            SizedBox(
+                              width: 170,
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: speciality.specialityPoints!
+                                    .map(
+                                      (e) => SpecialityPointWidget(
+                                        name: e.name,
+                                        value: e.value,
+                                      ),
+                                    )
+                                    .toList(),
+                              ),
                             ),
-                          ),
-                        if (speciality.technologies != null &&
-                            speciality.technologies!.isNotEmpty)
-                          TechnologiesWidget(
-                            technologies: speciality.technologies!,
-                          ),
-                      ],
+                          if (speciality.technologies != null &&
+                              speciality.technologies!.isNotEmpty)
+                            TechnologiesWidget(
+                              technologies: speciality.technologies!,
+                            ),
+                        ],
+                      ),
                     ),
                   ),
                 ),

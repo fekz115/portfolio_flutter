@@ -16,26 +16,29 @@ class SpecialityCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: InkWell(
-        onTap: onClick,
+      child: Hero(
+        tag: name,
         child: Card(
-          child: Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  name,
-                  style: const TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.w600,
+          child: InkWell(
+            onTap: onClick,
+            child: Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    name,
+                    style: const TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
-                ),
-                const SizedBox(height: 10),
-                Text(
-                  description,
-                ),
-              ],
+                  const SizedBox(height: 10),
+                  Text(
+                    description,
+                  ),
+                ],
+              ),
             ),
           ),
         ),
