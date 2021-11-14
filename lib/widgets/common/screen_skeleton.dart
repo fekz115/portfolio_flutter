@@ -14,7 +14,7 @@ class ScreenSkeleton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Theme(
-      data: ThemeData(
+      data: ThemeData.from(
         colorScheme: const ColorScheme.light().copyWith(
           background: Color(style.backgroundColor),
           primary: Color(style.primary),
