@@ -36,18 +36,13 @@ class SpecialityScreen extends StatelessWidget {
                             padding: const EdgeInsets.only(bottom: 10.0),
                             child: Text(
                               speciality.name,
-                              style: const TextStyle(
-                                fontSize: 24,
-                                fontWeight: FontWeight.w600,
-                              ),
+                              style: Theme.of(context).textTheme.headline4,
                             ),
                           ),
                           if (speciality.additionalInfo != null)
                             Text(
                               speciality.additionalInfo!,
-                              style: const TextStyle(
-                                fontSize: 18,
-                              ),
+                              style: Theme.of(context).textTheme.headline6,
                             ),
                           if (speciality.specialityPoints != null &&
                               speciality.specialityPoints!.isNotEmpty)
@@ -84,14 +79,11 @@ class SpecialityScreen extends StatelessWidget {
                         width: 450,
                         child: Column(
                           children: [
-                            const Padding(
-                              padding: EdgeInsets.only(bottom: 30.0),
+                            Padding(
+                              padding: const EdgeInsets.only(bottom: 30.0),
                               child: Text(
                                 'My projects:',
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.w600,
-                                ),
+                                style: Theme.of(context).textTheme.headline6,
                               ),
                             ),
                             ...speciality.projects!
@@ -107,8 +99,10 @@ class SpecialityScreen extends StatelessWidget {
                   child: ElevatedButton(
                     onPressed: () => Navigator.of(context).pop(),
                     child: const Padding(
-                      padding:
-                          EdgeInsets.symmetric(vertical: 8.0, horizontal: 16),
+                      padding: EdgeInsets.symmetric(
+                        vertical: 8.0,
+                        horizontal: 16,
+                      ),
                       child: Text(
                         'Go back',
                       ),
