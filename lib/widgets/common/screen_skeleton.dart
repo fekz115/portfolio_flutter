@@ -15,13 +15,13 @@ class ScreenSkeleton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Theme(
       data: ThemeData.from(
-        colorScheme: const ColorScheme.light().copyWith(
-          background: Color(style.backgroundColor),
-          primary: Color(style.primary),
-          primaryVariant: Color(style.primaryVariant),
-          secondary: Color(style.secondary),
-          secondaryVariant: Color(style.secondaryVariant),
-        ),
+        colorScheme: Theme.of(context).colorScheme.copyWith(
+              background: Color(style.backgroundColor),
+              primary: Color(style.primary),
+              primaryVariant: Color(style.primaryVariant),
+              secondary: Color(style.secondary),
+              secondaryVariant: Color(style.secondaryVariant),
+            ),
       ),
       child: Builder(
         builder: (context) {
@@ -48,14 +48,8 @@ class ScreenSkeleton extends StatelessWidget {
                         stops: const [0.0, 0.7, 0.9],
                         colors: [
                           const Color(0x00000000),
-                          Theme.of(context)
-                              .colorScheme
-                              .background
-                              .withOpacity(0.8),
-                          Theme.of(context)
-                              .colorScheme
-                              .background
-                              .withOpacity(1),
+                          Theme.of(context).cardColor.withOpacity(0.8),
+                          Theme.of(context).cardColor.withOpacity(1),
                         ],
                       ),
                     ),
