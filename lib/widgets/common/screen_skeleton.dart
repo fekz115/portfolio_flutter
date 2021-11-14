@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio_flutter/main.dart';
 import 'package:portfolio_flutter/model/screen_style.dart';
 
 class ScreenSkeleton extends StatelessWidget {
@@ -55,7 +56,26 @@ class ScreenSkeleton extends StatelessWidget {
                     ),
                   ),
                 ),
-                child,
+                Column(
+                  children: [
+                    child,
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          const Text('Dark mode'),
+                          Switch(
+                            value:
+                                Theme.of(context).brightness == Brightness.dark,
+                            onChanged: (value) =>
+                                themeManager.toggleTheme(isDark: value),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
               ],
             ),
           );
