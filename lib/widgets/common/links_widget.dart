@@ -9,24 +9,22 @@ class LinksWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
     return ClipRRect(
       borderRadius: const BorderRadius.all(
         Radius.circular(20),
       ),
       child: Container(
-        color: const Color(0x77000000),
+        color: theme.primaryColor.withOpacity(0.4),
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
           child: Column(
             children: [
-              const Padding(
-                padding: EdgeInsets.only(bottom: 10.0),
+              Padding(
+                padding: const EdgeInsets.only(bottom: 10.0),
                 child: Text(
                   'My links:',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w600,
-                  ),
+                  style: theme.textTheme.headline5,
                 ),
               ),
               Row(
