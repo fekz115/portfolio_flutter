@@ -15,7 +15,10 @@ class ProjectWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ExpansionTile(
-      title: Text(project.name),
+      title: Text(
+        project.name,
+        style: Theme.of(context).textTheme.headline6,
+      ),
       childrenPadding: const EdgeInsets.all(10),
       children: [
         if (project.link != null)
@@ -29,31 +32,31 @@ class ProjectWidget extends StatelessWidget {
                 },
                 child: Text(
                   project.link!,
-                  style: const TextStyle(
-                    color: Colors.indigo,
-                    decoration: TextDecoration.underline,
-                  ),
+                  style: Theme.of(context).textTheme.subtitle1?.copyWith(
+                        color: Colors.indigo,
+                        decoration: TextDecoration.underline,
+                      ),
                 ),
               ),
             ),
           ),
-        Text(project.description),
+        Text(
+          project.description,
+          style: Theme.of(context).textTheme.subtitle1,
+        ),
         ProjectStatusWidget(
           project: project,
         ),
         if (project.features != null && project.features!.isNotEmpty)
-          const SizedBox(
+          SizedBox(
             width: double.infinity,
             child: Padding(
-              padding: EdgeInsets.symmetric(
+              padding: const EdgeInsets.symmetric(
                 vertical: 6.0,
               ),
               child: Text(
                 'Key features:',
-                style: TextStyle(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w600,
-                ),
+                style: Theme.of(context).textTheme.headline6,
               ),
             ),
           ),
