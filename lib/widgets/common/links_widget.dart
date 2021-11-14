@@ -5,10 +5,7 @@ import 'package:url_launcher/url_launcher.dart';
 class LinksWidget extends StatelessWidget {
   const LinksWidget({
     Key? key,
-    this.mailSubject = 'Job',
   }) : super(key: key);
-
-  final String mailSubject;
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +25,7 @@ class LinksWidget extends StatelessWidget {
                 const Padding(
                   padding: EdgeInsets.only(bottom: 10.0),
                   child: Text(
-                    'Hire me:',
+                    'My links:',
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.w600,
@@ -41,23 +38,23 @@ class LinksWidget extends StatelessWidget {
                   children: [
                     IconButton(
                       icon: SvgPicture.asset('images/logo/github.svg'),
-                      onPressed: () async {
-                        await launch('https://github.com/fekz115');
-                      },
+                      onPressed: () => launch('https://github.com/fekz115'),
                     ),
                     IconButton(
                       icon: SvgPicture.asset('images/logo/gmail.svg'),
                       onPressed: () async {
-                        await launch(
-                          'https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=fekz115@gmail.com&su=Flutter%20Developer%20Job',
-                        );
+                        if (await canLaunch('mailto:fekz115@gmail.com')) {
+                          await launch('mailto:fekz115@gmail.com');
+                        } else {
+                          await launch(
+                            'https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=fekz115@gmail.com',
+                          );
+                        }
                       },
                     ),
                     IconButton(
                       icon: SvgPicture.asset('images/logo/telegram.svg'),
-                      onPressed: () async {
-                        await launch('https://t.me/fekz115');
-                      },
+                      onPressed: () => launch('https://t.me/fekz115'),
                     ),
                   ],
                 ),
