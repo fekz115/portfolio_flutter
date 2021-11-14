@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_flutter/data.dart';
-import 'package:portfolio_flutter/widgets/hire_me_widget.dart';
 import 'package:portfolio_flutter/widgets/info_widget.dart';
+import 'package:portfolio_flutter/widgets/links_widget.dart';
 import 'package:portfolio_flutter/widgets/screen_skeleton.dart';
 import 'package:portfolio_flutter/widgets/specialities_widget.dart';
 
@@ -30,7 +30,7 @@ class MainScreen extends StatelessWidget {
                   SpecialitiesWidget(
                     specialities: personInfo.specialties!,
                   ),
-                const HireMeWidget(),
+                const LinksWidget(),
               ],
             ),
           ),

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class HireMeWidget extends StatelessWidget {
-  const HireMeWidget({
+class LinksWidget extends StatelessWidget {
+  const LinksWidget({
     Key? key,
     this.mailSubject = 'Job',
   }) : super(key: key);
