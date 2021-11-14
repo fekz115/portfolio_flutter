@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_flutter/model/project.dart';
-import 'package:portfolio_flutter/widgets/feature_widget.dart';
-import 'package:portfolio_flutter/widgets/project_status_widget.dart';
+import 'package:portfolio_flutter/widgets/speciality_screen/feature_widget.dart';
+import 'package:portfolio_flutter/widgets/speciality_screen/project_status_widget.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ProjectWidget extends StatelessWidget {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_flutter/model/info_item.dart';
-import 'package:portfolio_flutter/widgets/info_item_widget.dart';
+import 'package:portfolio_flutter/widgets/main_screen/info_item_widget.dart';
 
 class AboutMeSectionWidget extends StatelessWidget {
   const AboutMeSectionWidget({

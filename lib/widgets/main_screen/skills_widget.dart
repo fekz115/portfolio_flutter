@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_flutter/model/knowledge.dart';
-import 'package:portfolio_flutter/widgets/knowledge_item_widget.dart';
+import 'package:portfolio_flutter/model/skill.dart';
+import 'package:portfolio_flutter/widgets/main_screen/skill_widget.dart';
 
-class KnowledgeWidget extends StatelessWidget {
-  const KnowledgeWidget({
+class SkillsWidget extends StatelessWidget {
+  const SkillsWidget({
     Key? key,
-    required this.knowledge,
+    required this.skills,
   }) : super(key: key);
 
-  final List<Knowledge> knowledge;
+  final List<Skill> skills;
 
   @override
   Widget build(BuildContext context) {
@@ -18,16 +18,17 @@ class KnowledgeWidget extends StatelessWidget {
       children: [
         const Divider(),
         const Text(
-          'Knowledge:',
+          'Skills:',
           style: TextStyle(
             fontWeight: FontWeight.w600,
             fontSize: 16,
           ),
         ),
-        ...knowledge
+        ...skills
             .map(
-              (e) => KnowledgeItemWidget(
-                name: e.name,
+              (skill) => SkillWidget(
+                name: skill.name,
+                value: skill.value,
               ),
             )
             .toList(),

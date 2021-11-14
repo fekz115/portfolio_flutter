@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_flutter/model/speciality.dart';
-import 'package:portfolio_flutter/widgets/project_widget.dart';
-import 'package:portfolio_flutter/widgets/screen_skeleton.dart';
-import 'package:portfolio_flutter/widgets/speciality_point_widget.dart';
-import 'package:portfolio_flutter/widgets/technologies_widget.dart';
+import 'package:portfolio_flutter/widgets/common/screen_skeleton.dart';
+import 'package:portfolio_flutter/widgets/speciality_screen/project_widget.dart';
+import 'package:portfolio_flutter/widgets/speciality_screen/speciality_point_widget.dart';
+import 'package:portfolio_flutter/widgets/speciality_screen/technologies_widget.dart';
 
 class SpecialityScreen extends StatelessWidget {
   const SpecialityScreen({
