@@ -6,8 +6,11 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: MainScreen(),
+    return MaterialApp(
+      home: const MainScreen(),
+      themeMode: ThemeMode.light,
+      theme: ThemeData.light(),
+      darkTheme: ThemeData.dark(),
     );
   }
 }
