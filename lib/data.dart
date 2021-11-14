@@ -57,18 +57,18 @@ const personInfo = PersonInfo(
     secondaryVariant: 0xFF616161,
   ),
   specialties: [
-    Speciality(
-      name: 'Android/Linux Enthusiast',
-      description: 'Building kernel, android roms for phones...',
-      style: ScreenStyle(
-        background: 'images/background/android_screen_background.jpg',
-        backgroundColor: 0xFF3E2723,
-        primary: 0xFFF48FB1,
-        primaryVariant: 0xFFAD1457,
-        secondary: 0xFF7986CB,
-        secondaryVariant: 0xFF9E9E9E,
-      ),
-    ),
+    // Speciality(
+    //   name: 'Android/Linux Enthusiast',
+    //   description: 'Building kernel, android roms for phones...',
+    //   style: ScreenStyle(
+    //     background: 'images/background/android_screen_background.jpg',
+    //     backgroundColor: 0xFF3E2723,
+    //     primary: 0xFFF48FB1,
+    //     primaryVariant: 0xFFAD1457,
+    //     secondary: 0xFF7986CB,
+    //     secondaryVariant: 0xFF9E9E9E,
+    //   ),
+    // ),
     Speciality(
       name: 'Flutter Developer',
       description: 'State-management, 60fps, widgets...',
@@ -258,17 +258,17 @@ const personInfo = PersonInfo(
         secondaryVariant: 0xFF78909C,
       ),
     ),
-    Speciality(
-      name: 'Java/Kotlin Backend Developer',
-      description: 'Spring, databases, docker...',
-      style: ScreenStyle(
-        background: 'images/background/spring_screen_background.jpg',
-        backgroundColor: 0xFF212121,
-        primary: 0xFFBCAAA4,
-        primaryVariant: 0xFF616161,
-        secondary: 0xFF78909c,
-        secondaryVariant: 0xFF78909c,
-      ),
-    ),
+    // Speciality(
+    //   name: 'Java/Kotlin Backend Developer',
+    //   description: 'Spring, databases, docker...',
+    //   style: ScreenStyle(
+    //     background: 'images/background/spring_screen_background.jpg',
+    //     backgroundColor: 0xFF212121,
+    //     primary: 0xFFBCAAA4,
+    //     primaryVariant: 0xFF616161,
+    //     secondary: 0xFF78909c,
+    //     secondaryVariant: 0xFF78909c,
+    //   ),
+    // ),
   ],
 );
