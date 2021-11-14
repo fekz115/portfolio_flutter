@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_flutter/model/speciality.dart';
+import 'package:portfolio_flutter/widgets/common/links_widget.dart';
 import 'package:portfolio_flutter/widgets/common/screen_skeleton.dart';
 import 'package:portfolio_flutter/widgets/speciality_screen/project_widget.dart';
 import 'package:portfolio_flutter/widgets/speciality_screen/speciality_point_widget.dart';
@@ -111,6 +112,7 @@ class SpecialityScreen extends StatelessWidget {
                     ),
                   ),
                 ),
+                const LinksWidget(),
               ],
             ),
           ),
