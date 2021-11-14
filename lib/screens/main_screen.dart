@@ -15,24 +15,21 @@ class MainScreen extends StatelessWidget {
     return Scaffold(
       body: ScreenSkeleton(
         style: personInfo.style,
-        child: SingleChildScrollView(
-          padding: const EdgeInsets.all(30),
-          child: SizedBox(
-            width: double.infinity,
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                const InfoWidget(
-                  personInfo: personInfo,
+        child: SizedBox(
+          width: double.infinity,
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              const InfoWidget(
+                personInfo: personInfo,
+              ),
+              if (personInfo.specialties != null &&
+                  personInfo.specialties!.isNotEmpty)
+                SpecialitiesWidget(
+                  specialities: personInfo.specialties!,
                 ),
-                if (personInfo.specialties != null &&
-                    personInfo.specialties!.isNotEmpty)
-                  SpecialitiesWidget(
-                    specialities: personInfo.specialties!,
-                  ),
-                const LinksWidget(),
-              ],
-            ),
+              const LinksWidget(),
+            ],
           ),
         ),
       ),

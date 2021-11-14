@@ -25,31 +25,39 @@ class ScreenSkeleton extends StatelessWidget {
       ),
       child: Builder(
         builder: (context) {
-          return Container(
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage(style.background),
-                fit: BoxFit.cover,
-              ),
-            ),
+          final height = MediaQuery.of(context).size.height;
+          return SingleChildScrollView(
             child: Stack(
               children: [
-                Container(
-                  width: double.infinity,
-                  height: double.infinity,
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      begin: Alignment.topCenter,
-                      end: Alignment.bottomCenter,
-                      stops: const [0.0, 0.7, 0.9],
-                      colors: [
-                        const Color(0x00000000),
-                        Theme.of(context)
-                            .colorScheme
-                            .background
-                            .withOpacity(0.8),
-                        Theme.of(context).colorScheme.background.withOpacity(1),
-                      ],
+                SizedBox(
+                  height: height,
+                ),
+                Positioned.fill(
+                  child: Image.asset(
+                    style.background,
+                    fit: BoxFit.fitWidth,
+                  ),
+                ),
+                Positioned.fill(
+                  child: Container(
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        stops: const [0.0, 0.7, 0.9],
+                        colors: [
+                          const Color(0x00000000),
+                          Theme.of(context)
+                              .colorScheme
+                              .background
+                              .withOpacity(0.8),
+                          Theme.of(context)
+                              .colorScheme
+                              .background
+                              .withOpacity(1),
+                        ],
+                      ),
                     ),
                   ),
                 ),
