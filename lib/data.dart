@@ -7,6 +7,7 @@ import 'package:portfolio_flutter/model/project_status.dart';
 import 'package:portfolio_flutter/model/screen_style.dart';
 import 'package:portfolio_flutter/model/skill.dart';
 import 'package:portfolio_flutter/model/speciality.dart';
+import 'package:portfolio_flutter/model/speciality_point.dart';
 import 'package:portfolio_flutter/model/technology.dart';
 
 const personInfo = PersonInfo(
@@ -314,6 +315,74 @@ const personInfo = PersonInfo(
         secondary: 0xFF78909c,
         secondaryVariant: 0xFF78909c,
       ),
+      additionalInfo:
+          'This is my second software engineering speciality,\nbut mobile development in priority',
+      specialityPoints: [
+        SpecialityPoint(
+          name: 'Expirience',
+          value:
+              'Completed internal cources of EPAM Systems,\nJava Web(Spring)',
+        ),
+      ],
+      technologies: {
+        'Programming languages': [
+          Technology(
+            name: 'kotlin',
+            link: 'https://kotlinlang.org',
+          ),
+          Technology(
+            name: 'java',
+            link: 'https://java.com',
+          ),
+        ],
+        'Build systems': [
+          Technology(
+            name: 'gradle',
+            link: 'https://gradle.com',
+          ),
+          Technology(
+            name: 'maven',
+            link: 'https://maven.apache.org',
+          ),
+        ],
+        'Spring modules familiar with': [
+          Technology(
+            name: 'Spring Core',
+          ),
+          Technology(
+            name: 'Spring Boot',
+          ),
+          Technology(
+            name: 'Spring Web[flux]',
+          ),
+          Technology(
+            name: 'Spring Data [JDBC/JPA]',
+          ),
+          Technology(
+            name: 'Spring Web Security',
+          ),
+        ],
+        'Databases': [
+          Technology(
+            name: 'MongoDB',
+            link: 'https://www.mongodb.com/',
+          ),
+          Technology(
+            name: 'PostgresSQL',
+            link: 'https://www.postgresql.org/',
+          ),
+          Technology(
+            name: 'MySQL(MariaDB)',
+            link: 'https://www.mysql.com/',
+          ),
+        ],
+        'CI/CD': [
+          Technology(
+            name: 'Jenkins',
+            link: 'https://www.jenkins.io/',
+          ),
+        ],
+      },
     ),
   ],
 );
