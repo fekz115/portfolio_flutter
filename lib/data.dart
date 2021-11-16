@@ -57,18 +57,63 @@ const personInfo = PersonInfo(
     secondaryVariant: 0xFF616161,
   ),
   specialties: [
-    // Speciality(
-    //   name: 'Android/Linux Enthusiast',
-    //   description: 'Building kernel, android roms for phones...',
-    //   style: ScreenStyle(
-    //     background: 'images/background/android_screen_background.jpg',
-    //     backgroundColor: 0xFF3E2723,
-    //     primary: 0xFFF48FB1,
-    //     primaryVariant: 0xFFAD1457,
-    //     secondary: 0xFF7986CB,
-    //     secondaryVariant: 0xFF9E9E9E,
-    //   ),
-    // ),
+    Speciality(
+      name: 'Android/Linux Enthusiast',
+      description: 'Building kernel, android roms for phones...',
+      style: ScreenStyle(
+        background: 'images/background/android_screen_background.jpg',
+        backgroundColor: 0xFF3E2723,
+        primary: 0xFFF48FB1,
+        primaryVariant: 0xFFAD1457,
+        secondary: 0xFF7986CB,
+        secondaryVariant: 0xFF9E9E9E,
+      ),
+      projects: [
+        Project(
+          name: 'LineageOS 16.0 vince',
+          description:
+              'Based on los-16 tissot device-tree, no-name kernel and vendor sources, so not in public',
+          status: ProjectStatus.completed,
+          progress: 1.0,
+          features: [
+            ProjectFeature(
+              value: 'Stable',
+            ),
+            ProjectFeature(
+              value: 'Uses kernel 3.18',
+            ),
+            ProjectFeature(
+              value:
+                  'Device-tree created according to tissot-device tree from zero',
+            ),
+          ],
+        ),
+        Project(
+          name: '3.18 CAF kernel vince',
+          description:
+              'Based on OEM-commit for LA.UM.6.6.r1 and will be used for 4.9 port and Ubuntu Touch',
+          status: ProjectStatus.inDevelopment,
+          progress: 0.9,
+          features: [
+            ProjectFeature(
+              value: 'Release candidate',
+            ),
+            ProjectFeature(
+              value: 'Based on LA.UM.6.6.r1',
+            ),
+            ProjectFeature(
+              value: 'Merged latest caf tag',
+            ),
+            ProjectFeature(
+              value:
+                  'Device-specific drivers and dts splitted by commits and updated',
+            ),
+          ],
+        ),
+      ],
+      additionalInfo:
+          'My main hobby, bringing up new linux kernels\nand android versions for old phones.',
+    ),
     Speciality(
       name: 'Flutter Developer',
       description: 'State-management, 60fps, widgets...',
@@ -258,17 +303,17 @@ const personInfo = PersonInfo(
         secondaryVariant: 0xFF78909C,
       ),
     ),
-    // Speciality(
-    //   name: 'Java/Kotlin Backend Developer',
-    //   description: 'Spring, databases, docker...',
-    //   style: ScreenStyle(
-    //     background: 'images/background/spring_screen_background.jpg',
-    //     backgroundColor: 0xFF212121,
-    //     primary: 0xFFBCAAA4,
-    //     primaryVariant: 0xFF616161,
-    //     secondary: 0xFF78909c,
-    //     secondaryVariant: 0xFF78909c,
-    //   ),
-    // ),
+    Speciality(
+      name: 'Java/Kotlin Backend Developer',
+      description: 'Spring, databases, docker...',
+      style: ScreenStyle(
+        background: 'images/background/spring_screen_background.jpg',
+        backgroundColor: 0xFF212121,
+        primary: 0xFFBCAAA4,
+        primaryVariant: 0xFF616161,
+        secondary: 0xFF78909c,
+        secondaryVariant: 0xFF78909c,
+      ),
+    ),
   ],
 );
