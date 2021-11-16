@@ -28,47 +28,57 @@ class TechnologiesWidget extends StatelessWidget {
           ),
           ...technologies.entries
               .map(
-                (e) => Row(
+                (e) => Column(
                   children: [
-                    SelectableText(
-                      '${e.key}:',
-                      style: Theme.of(context).textTheme.subtitle1,
-                    ),
-                    const Spacer(),
-                    RichText(
-                      text: TextSpan(
-                        style: Theme.of(context).textTheme.subtitle1,
-                        children: e.value
-                            .map(
-                              (e) => [
-                                const TextSpan(text: ', '),
-                                TextSpan(
-                                  text: e.name,
-                                  recognizer: TapGestureRecognizer()
-                                    ..onTap = () async {
-                                      if (e.link != null) {
-                                        await launch(e.link!);
-                                      }
-                                    },
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .subtitle1
-                                      ?.copyWith(
-                                        color: e.link != null
-                                            ? Colors.indigo
-                                            : null,
-                                        decoration: e.link != null
-                                            ? TextDecoration.underline
-                                            : TextDecoration.none,
+                    Row(
+                      children: [
+                        Flexible(
+                          flex: 2,
+                          fit: FlexFit.tight,
+                          child: SelectableText(
+                            '${e.key}:',
+                            style: Theme.of(context).textTheme.subtitle1,
+                          ),
+                        ),
+                        Flexible(
+                          child: RichText(
+                            text: TextSpan(
+                              style: Theme.of(context).textTheme.subtitle1,
+                              children: e.value
+                                  .map(
+                                    (e) => [
+                                      const TextSpan(text: ', '),
+                                      TextSpan(
+                                        text: e.name,
+                                        recognizer: TapGestureRecognizer()
+                                          ..onTap = () async {
+                                            if (e.link != null) {
+                                              await launch(e.link!);
+                                            }
+                                          },
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .subtitle1
+                                            ?.copyWith(
+                                              color: e.link != null
+                                                  ? Colors.indigo
+                                                  : null,
+                                              decoration: e.link != null
+                                                  ? TextDecoration.underline
+                                                  : TextDecoration.none,
+                                            ),
                                       ),
-                                ),
-                              ],
-                            )
-                            .expand((element) => element)
-                            .skip(1)
-                            .toList(),
-                      ),
+                                    ],
+                                  )
+                                  .expand((element) => element)
+                                  .skip(1)
+                                  .toList(),
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
+                    const Divider(),
                   ],
                 ),
               )

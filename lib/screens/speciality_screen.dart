@@ -46,18 +46,20 @@ class SpecialityScreen extends StatelessWidget {
                             ),
                           if (speciality.specialityPoints != null &&
                               speciality.specialityPoints!.isNotEmpty)
-                            SizedBox(
-                              width: 170,
-                              child: Column(
-                                mainAxisSize: MainAxisSize.min,
-                                children: speciality.specialityPoints!
-                                    .map(
-                                      (e) => SpecialityPointWidget(
-                                        name: e.name,
-                                        value: e.value,
-                                      ),
-                                    )
-                                    .toList(),
+                            Padding(
+                              padding: const EdgeInsets.only(top: 8.0),
+                              child: SizedBox(
+                                width: 450,
+                                child: Column(
+                                  children: speciality.specialityPoints!
+                                      .map(
+                                        (e) => SpecialityPointWidget(
+                                          name: e.name,
+                                          value: e.value,
+                                        ),
+                                      )
+                                      .toList(),
+                                ),
                               ),
                             ),
                           if (speciality.technologies != null &&
