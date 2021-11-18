@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio_flutter/data.dart';
 import 'package:portfolio_flutter/screens/main_screen.dart';
 import 'package:portfolio_flutter/theme_manager.dart';
 
@@ -33,6 +34,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: '${personInfo.firstName} ${personInfo.lastName}',
       home: const MainScreen(),
       themeMode: themeManager.themeMode,
       theme: ThemeData.light(),

@@ -37,6 +37,22 @@ class ScreenSkeleton extends StatelessWidget {
                   child: Image.asset(
                     style.background,
                     fit: BoxFit.fitWidth,
+                    frameBuilder: (
+                      BuildContext context,
+                      Widget child,
+                      int? frame,
+                      bool wasSynchronouslyLoaded,
+                    ) {
+                      if (wasSynchronouslyLoaded) {
+                        return child;
+                      }
+                      return AnimatedOpacity(
+                        opacity: frame == null ? 0 : 1,
+                        duration: const Duration(seconds: 1),
+                        curve: Curves.easeOut,
+                        child: child,
+                      );
+                    },
                   ),
                 ),
                 Positioned.fill(
@@ -58,7 +74,17 @@ class ScreenSkeleton extends StatelessWidget {
                 ),
                 Column(
                   children: [
-                    child,
+                    TweenAnimationBuilder<double>(
+                      duration: const Duration(milliseconds: 500),
+                      tween: Tween(begin: 20, end: 0),
+                      builder: (context, value, _) => Transform.translate(
+                        offset: Offset(0, value),
+                        child: Opacity(
+                          opacity: (100 - value * 5) / 100,
+                          child: child,
+                        ),
+                      ),
+                    ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Row(
