@@ -59,9 +59,14 @@ class ProjectStatusWidget extends StatelessWidget {
             ),
           Padding(
             padding: const EdgeInsets.only(top: 10.0),
-            child: LinearProgressIndicator(
-              value: project.progress,
-              color: color,
+            child: TweenAnimationBuilder<double>(
+              duration: const Duration(seconds: 1),
+              tween: Tween(begin: 0, end: project.progress),
+              curve: Curves.easeOutQuint,
+              builder: (context, value, _) => LinearProgressIndicator(
+                value: value,
+                color: color,
+              ),
             ),
           ),
         ],
