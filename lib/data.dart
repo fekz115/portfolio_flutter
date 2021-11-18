@@ -11,6 +11,7 @@ import 'package:portfolio_flutter/model/speciality_point.dart';
 import 'package:portfolio_flutter/model/technology.dart';
 
 const personInfo = PersonInfo(
+  avatarUrl: 'images/ava.jpg',
   description: 'Flutter Developer, Android/Linux Enthusiast',
   firstName: 'Eugene',
   lastName: 'Lepshi',
