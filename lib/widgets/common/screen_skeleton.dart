@@ -74,7 +74,17 @@ class ScreenSkeleton extends StatelessWidget {
                 ),
                 Column(
                   children: [
-                    child,
+                    TweenAnimationBuilder<double>(
+                      duration: const Duration(milliseconds: 500),
+                      tween: Tween(begin: 20, end: 0),
+                      builder: (context, value, _) => Transform.translate(
+                        offset: Offset(0, value),
+                        child: Opacity(
+                          opacity: (100 - value * 5) / 100,
+                          child: child,
+                        ),
+                      ),
+                    ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Row(
