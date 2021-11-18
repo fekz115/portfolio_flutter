@@ -142,6 +142,10 @@ const personInfo = PersonInfo(
             link: 'https://pub.dev/packages/getx',
           ),
           Technology(
+            name: 'MobX',
+            link: 'https://pub.dev/packages/mobx',
+          ),
+          Technology(
             name: 'whelm',
             link: 'https://github.com/fekz115/whelm',
           ),
@@ -206,15 +210,30 @@ const personInfo = PersonInfo(
             link: 'https://pub.dev/packages/hive',
           ),
         ],
+        'CI/CD': [
+          Technology(
+            name: 'Github Actions',
+            link: 'https://www.github.com/',
+          ),
+          Technology(
+            name: 'Jenkins',
+            link: 'https://www.jenkins.io/',
+          ),
+        ],
       },
       projects: [
         Project(
           name: 'This site :)',
-          description:
-              'This site is my portfolio web site, it is still in development, cool animations, another specialities and anything else coming soon...',
+          description: 'This site is my portfolio web site.',
           link: 'https://github.com/fekz115/flutter_portfolio',
-          status: ProjectStatus.inDevelopment,
-          progress: 0.6,
+          status: ProjectStatus.completed,
+          progress: 1.0,
+          features: [
+            ProjectFeature(
+              value:
+                  'Uses Github Actions to build and deploy to Github Pages automaticly',
+            ),
+          ],
         ),
         Project(
           name: 'Whelm',
