@@ -12,6 +12,7 @@ class PersonInfo {
   final int? age;
   final String? country;
   final String? city;
+  final String email;
   final String? timeZone;
   final List<InfoItem>? additionalInfoItems;
   final List<Skill>? skills;
@@ -27,6 +28,7 @@ class PersonInfo {
     this.age,
     this.country,
     this.city,
+    this.email,
     this.timeZone,
     this.additionalInfoItems,
     this.skills,

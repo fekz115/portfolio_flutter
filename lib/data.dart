@@ -18,6 +18,7 @@ const personInfo = PersonInfo(
   age: 21,
   city: 'Gomel',
   country: 'Belarus',
+  email: 'добавь контакты пж, или позвони как будет время =)',
   timeZone: 'GMT +3',
   skills: [
     Skill(
