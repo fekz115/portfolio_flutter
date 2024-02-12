@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 class InfoItemWidget extends StatelessWidget {
   const InfoItemWidget({
-    Key? key,
+    super.key,
     required this.name,
     required this.value,
-  }) : super(key: key);
+  });
 
   final String name;
   final String value;

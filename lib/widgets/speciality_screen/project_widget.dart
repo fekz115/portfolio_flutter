@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:portfolio_flutter/model/project.dart';
 import 'package:portfolio_flutter/widgets/speciality_screen/feature_widget.dart';
 import 'package:portfolio_flutter/widgets/speciality_screen/project_status_widget.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 class ProjectWidget extends StatelessWidget {
   const ProjectWidget({
-    Key? key,
+    super.key,
     required this.project,
-  }) : super(key: key);
+  });
 
   final Project project;
 
@@ -17,7 +17,7 @@ class ProjectWidget extends StatelessWidget {
     return ExpansionTile(
       title: Text(
         project.name,
-        style: Theme.of(context).textTheme.headline6,
+        style: Theme.of(context).textTheme.titleLarge,
       ),
       childrenPadding: const EdgeInsets.all(10),
       children: [
@@ -27,12 +27,10 @@ class ProjectWidget extends StatelessWidget {
             child: SizedBox(
               width: double.infinity,
               child: InkWell(
-                onTap: () async {
-                  await launch(project.link!);
-                },
+                onTap: () => launchUrlString(project.link!),
                 child: Text(
                   project.link!,
-                  style: Theme.of(context).textTheme.subtitle1?.copyWith(
+                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
                         color: Colors.indigo,
                         decoration: TextDecoration.underline,
                       ),
@@ -42,7 +40,7 @@ class ProjectWidget extends StatelessWidget {
           ),
         Text(
           project.description,
-          style: Theme.of(context).textTheme.subtitle1,
+          style: Theme.of(context).textTheme.titleMedium,
         ),
         ProjectStatusWidget(
           project: project,
@@ -56,14 +54,12 @@ class ProjectWidget extends StatelessWidget {
               ),
               child: Text(
                 'Key features:',
-                style: Theme.of(context).textTheme.headline6,
+                style: Theme.of(context).textTheme.titleLarge,
               ),
             ),
           ),
         if (project.features != null && project.features!.isNotEmpty)
-          ...project.features!
-              .map((e) => FeatureWidget(value: e.value))
-              .toList(),
+          ...project.features!.map((e) => FeatureWidget(value: e.value)),
       ],
     );
   }

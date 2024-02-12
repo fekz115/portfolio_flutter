@@ -8,9 +8,9 @@ import 'package:portfolio_flutter/widgets/speciality_screen/technologies_widget.
 
 class SpecialityScreen extends StatelessWidget {
   const SpecialityScreen({
-    Key? key,
+    super.key,
     required this.speciality,
-  }) : super(key: key);
+  });
 
   final Speciality speciality;
 
@@ -36,13 +36,13 @@ class SpecialityScreen extends StatelessWidget {
                             padding: const EdgeInsets.only(bottom: 10.0),
                             child: Text(
                               speciality.name,
-                              style: Theme.of(context).textTheme.headline4,
+                              style: Theme.of(context).textTheme.headlineMedium,
                             ),
                           ),
                           if (speciality.additionalInfo != null)
                             Text(
                               speciality.additionalInfo!,
-                              style: Theme.of(context).textTheme.headline6,
+                              style: Theme.of(context).textTheme.titleLarge,
                             ),
                           if (speciality.specialityPoints != null &&
                               speciality.specialityPoints!.isNotEmpty)
@@ -85,12 +85,12 @@ class SpecialityScreen extends StatelessWidget {
                               padding: const EdgeInsets.only(bottom: 30.0),
                               child: Text(
                                 'My projects:',
-                                style: Theme.of(context).textTheme.headline6,
+                                style: Theme.of(context).textTheme.titleLarge,
                               ),
                             ),
                             ...speciality.projects!
                                 .map((e) => ProjectWidget(project: e))
-                                .toList()
+                                ,
                           ],
                         ),
                       ),

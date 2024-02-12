@@ -4,9 +4,9 @@ import 'package:portfolio_flutter/model/project_status.dart';
 
 class ProjectStatusWidget extends StatelessWidget {
   const ProjectStatusWidget({
-    Key? key,
+    super.key,
     required this.project,
-  }) : super(key: key);
+  });
 
   final Project project;
 
@@ -16,13 +16,10 @@ class ProjectStatusWidget extends StatelessWidget {
     switch (project.status) {
       case ProjectStatus.inDevelopment:
         color = Colors.blue[600] ?? color;
-        break;
       case ProjectStatus.frozen:
         color = Theme.of(context).disabledColor;
-        break;
       case ProjectStatus.completed:
         color = Colors.green[600] ?? color;
-        break;
     }
     return Padding(
       padding: const EdgeInsets.only(top: 8.0),

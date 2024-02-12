@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 class FeatureWidget extends StatelessWidget {
   const FeatureWidget({
-    Key? key,
+    super.key,
     required this.value,
-  }) : super(key: key);
+  });
 
   final String value;
 
@@ -21,7 +21,7 @@ class FeatureWidget extends StatelessWidget {
         Flexible(
           child: Text(
             value,
-            style: Theme.of(context).textTheme.subtitle2,
+            style: Theme.of(context).textTheme.titleSmall,
           ),
         ),
       ],

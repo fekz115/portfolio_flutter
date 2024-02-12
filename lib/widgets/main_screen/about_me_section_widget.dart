@@ -4,14 +4,14 @@ import 'package:portfolio_flutter/widgets/main_screen/info_item_widget.dart';
 
 class AboutMeSectionWidget extends StatelessWidget {
   const AboutMeSectionWidget({
-    Key? key,
+    super.key,
     required this.description,
     this.age,
     this.country,
     this.city,
     this.timeZone,
     this.additionalInfoItems,
-  }) : super(key: key);
+  });
 
   final String description;
   final int? age;
@@ -52,7 +52,7 @@ class AboutMeSectionWidget extends StatelessWidget {
                       value: item.value,
                     ),
                   )
-                  .toList(),
+                  ,
           ].where((element) => element != null).cast<Widget>().toList(),
         ),
       ],
@@ -66,6 +66,7 @@ class AboutMeSectionWidget extends StatelessWidget {
         value: _buildLocationValue(),
       );
     }
+    return null;
   }
 
   String _buildLocationValue() {

@@ -5,9 +5,9 @@ import 'package:portfolio_flutter/widgets/main_screen/speciality_card_widget.dar
 
 class SpecialitiesWidget extends StatelessWidget {
   const SpecialitiesWidget({
-    Key? key,
+    super.key,
     required this.specialities,
-  }) : super(key: key);
+  });
 
   final List<Speciality> specialities;
 
@@ -22,7 +22,7 @@ class SpecialitiesWidget extends StatelessWidget {
           ),
           child: Text(
             'You wanna see me as:',
-            style: Theme.of(context).textTheme.headline5,
+            style: Theme.of(context).textTheme.headlineSmall,
           ),
         ),
         Wrap(

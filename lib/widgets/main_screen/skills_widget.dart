@@ -4,9 +4,9 @@ import 'package:portfolio_flutter/widgets/main_screen/skill_widget.dart';
 
 class SkillsWidget extends StatelessWidget {
   const SkillsWidget({
-    Key? key,
+    super.key,
     required this.skills,
-  }) : super(key: key);
+  });
 
   final List<Skill> skills;
 
@@ -31,7 +31,7 @@ class SkillsWidget extends StatelessWidget {
                 value: skill.value,
               ),
             )
-            .toList(),
+            ,
       ],
     );
   }

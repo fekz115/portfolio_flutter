@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 class SkillWidget extends StatelessWidget {
   const SkillWidget({
-    Key? key,
+    super.key,
     required this.name,
     required this.value,
-  }) : super(key: key);
+  });
 
   final String name;
   final double value;

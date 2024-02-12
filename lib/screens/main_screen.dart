@@ -7,8 +7,8 @@ import 'package:portfolio_flutter/widgets/main_screen/specialities_widget.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {

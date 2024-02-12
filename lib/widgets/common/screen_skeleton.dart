@@ -4,10 +4,10 @@ import 'package:portfolio_flutter/model/screen_style.dart';
 
 class ScreenSkeleton extends StatelessWidget {
   const ScreenSkeleton({
-    Key? key,
+    super.key,
     required this.style,
     required this.child,
-  }) : super(key: key);
+  });
 
   final ScreenStyle style;
   final Widget child;
@@ -19,9 +19,7 @@ class ScreenSkeleton extends StatelessWidget {
         colorScheme: Theme.of(context).colorScheme.copyWith(
               background: Color(style.backgroundColor),
               primary: Color(style.primary),
-              primaryVariant: Color(style.primaryVariant),
               secondary: Color(style.secondary),
-              secondaryVariant: Color(style.secondaryVariant),
             ),
       ),
       child: Builder(

@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 class SpecialityPointWidget extends StatelessWidget {
   const SpecialityPointWidget({
-    Key? key,
+    super.key,
     required this.name,
     required this.value,
-  }) : super(key: key);
+  });
 
   final String name;
   final String value;
@@ -18,12 +18,12 @@ class SpecialityPointWidget extends StatelessWidget {
         children: [
           SelectableText(
             '$name:',
-            style: Theme.of(context).textTheme.headline6,
+            style: Theme.of(context).textTheme.titleLarge,
           ),
           const Spacer(),
           SelectableText(
             value,
-            style: Theme.of(context).textTheme.subtitle1,
+            style: Theme.of(context).textTheme.titleMedium,
           ),
         ],
       ),

@@ -4,9 +4,9 @@ import 'package:portfolio_flutter/widgets/main_screen/knowledge_item_widget.dart
 
 class KnowledgeWidget extends StatelessWidget {
   const KnowledgeWidget({
-    Key? key,
+    super.key,
     required this.knowledge,
-  }) : super(key: key);
+  });
 
   final List<Knowledge> knowledge;
 
@@ -30,7 +30,7 @@ class KnowledgeWidget extends StatelessWidget {
                 name: e.name,
               ),
             )
-            .toList(),
+            ,
       ],
     );
   }

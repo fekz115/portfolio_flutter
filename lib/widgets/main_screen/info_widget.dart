@@ -8,9 +8,9 @@ import 'package:portfolio_flutter/widgets/main_screen/skills_widget.dart';
 
 class InfoWidget extends StatelessWidget {
   const InfoWidget({
-    Key? key,
+    super.key,
     required this.personInfo,
-  }) : super(key: key);
+  });
 
   final PersonInfo personInfo;
 

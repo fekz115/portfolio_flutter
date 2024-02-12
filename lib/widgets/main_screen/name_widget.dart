@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 class NameWidget extends StatelessWidget {
   const NameWidget({
-    Key? key,
+    super.key,
     required this.firstName,
     required this.lastName,
-  }) : super(key: key);
+  });
 
   final String firstName;
   final String lastName;

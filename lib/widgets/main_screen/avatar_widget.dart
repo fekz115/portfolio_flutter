@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 class AvatarWidget extends StatelessWidget {
   const AvatarWidget({
-    Key? key,
+    super.key,
     this.url,
-  }) : super(key: key);
+  });
 
   final String? url;
 

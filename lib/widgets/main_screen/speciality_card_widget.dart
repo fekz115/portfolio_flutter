@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 class SpecialityCard extends StatelessWidget {
   const SpecialityCard({
-    Key? key,
+    super.key,
     required this.name,
     required this.description,
     this.onClick,
-  }) : super(key: key);
+  });
 
   final String name;
   final String description;

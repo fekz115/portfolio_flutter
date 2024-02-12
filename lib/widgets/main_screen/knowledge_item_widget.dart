@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 class KnowledgeItemWidget extends StatelessWidget {
   const KnowledgeItemWidget({
-    Key? key,
+    super.key,
     required this.name,
-  }) : super(key: key);
+  });
 
   final String name;
 
