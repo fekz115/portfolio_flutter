@@ -14,10 +14,10 @@ const personInfo = PersonInfo(
   avatarUrl: 'images/ava.jpg',
   description: 'Flutter Developer, Android/Linux Enthusiast',
   firstName: 'Eugene',
-  lastName: 'Lepshi',
-  age: 21,
-  city: 'Gomel',
-  country: 'Belarus',
+  lastName: 'Lepshy',
+  age: 24,
+  city: 'Moscow',
+  country: 'Russia',
   timeZone: 'GMT +3',
   skills: [
     Skill(
