@@ -9,13 +9,12 @@ class KnowledgeItemWidget extends StatelessWidget {
   final String name;
 
   @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        const Icon(Icons.check),
-        const SizedBox(width: 4),
-        Text(name),
-      ],
-    );
-  }
+  Widget build(BuildContext context) => Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const Icon(Icons.check),
+          const SizedBox(width: 4),
+          Expanded(child: Text(name)),
+        ],
+      );
 }

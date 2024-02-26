@@ -11,22 +11,22 @@ class SpecialityPointWidget extends StatelessWidget {
   final String value;
 
   @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(4.0),
-      child: Row(
-        children: [
-          SelectableText(
-            '$name:',
-            style: Theme.of(context).textTheme.titleLarge,
-          ),
-          const Spacer(),
-          SelectableText(
-            value,
-            style: Theme.of(context).textTheme.titleMedium,
-          ),
-        ],
-      ),
-    );
-  }
+  Widget build(BuildContext context) => Padding(
+        padding: const EdgeInsets.all(4.0),
+        child: Row(
+          children: [
+            SelectableText(
+              '$name:',
+              style: Theme.of(context).textTheme.titleLarge,
+            ),
+            const Spacer(),
+            Expanded(
+              child: SelectableText(
+                value,
+                style: Theme.of(context).textTheme.titleMedium,
+              ),
+            ),
+          ],
+        ),
+      );
 }

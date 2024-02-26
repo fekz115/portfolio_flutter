@@ -11,27 +11,23 @@ class KnowledgeWidget extends StatelessWidget {
   final List<Knowledge> knowledge;
 
   @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        const Divider(),
-        const Text(
-          'Knowledge:',
-          style: TextStyle(
-            fontWeight: FontWeight.w600,
-            fontSize: 16,
+  Widget build(BuildContext context) => Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          const Divider(),
+          const Text(
+            'Knowledge:',
+            style: TextStyle(
+              fontWeight: FontWeight.w600,
+              fontSize: 16,
+            ),
           ),
-        ),
-        ...knowledge
-            .map(
-              (e) => KnowledgeItemWidget(
-                name: e.name,
-              ),
-            )
-            ,
-      ],
-    );
-  }
+          ...knowledge.map(
+            (e) => KnowledgeItemWidget(
+              name: e.name,
+            ),
+          ),
+        ],
+      );
 }
