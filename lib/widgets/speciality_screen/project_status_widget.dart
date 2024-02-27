@@ -10,64 +10,50 @@ class ProjectStatusWidget extends StatelessWidget {
 
   final Project project;
 
+  Color _getTitleColor(ProjectStatus status, BuildContext context) =>
+      switch (project.status) {
+        ProjectStatus.inDevelopment => Colors.blue[600],
+        ProjectStatus.frozen => Theme.of(context).disabledColor,
+        ProjectStatus.completed => Colors.green[600],
+        ProjectStatus.abandoned => Theme.of(context).disabledColor,
+      } ??
+      Theme.of(context).indicatorColor;
+
+  String _getTitle(ProjectStatus status) => switch (status) {
+        ProjectStatus.inDevelopment => 'In development',
+        ProjectStatus.frozen => 'Frozen',
+        ProjectStatus.completed => 'Completed',
+        ProjectStatus.abandoned => 'Abandoned',
+      };
+
   @override
-  Widget build(BuildContext context) {
-    var color = Theme.of(context).indicatorColor;
-    switch (project.status) {
-      case ProjectStatus.inDevelopment:
-        color = Colors.blue[600] ?? color;
-      case ProjectStatus.frozen:
-        color = Theme.of(context).disabledColor;
-      case ProjectStatus.completed:
-        color = Colors.green[600] ?? color;
-    }
-    return Padding(
-      padding: const EdgeInsets.only(top: 8.0),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          if (project.status == ProjectStatus.inDevelopment)
+  Widget build(BuildContext context) => Padding(
+        padding: const EdgeInsets.only(top: 8.0),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
             Text(
-              'In development',
+              _getTitle(project.status),
               style: TextStyle(
-                color: color,
+                color: _getTitleColor(project.status, context),
                 fontWeight: FontWeight.w600,
                 fontSize: 18,
               ),
             ),
-          if (project.status == ProjectStatus.frozen)
-            Text(
-              'Frozen',
-              style: TextStyle(
-                color: color,
-                fontWeight: FontWeight.w600,
-                fontSize: 18,
+            Padding(
+              padding: const EdgeInsets.only(top: 10.0),
+              child: TweenAnimationBuilder<double>(
+                duration: const Duration(seconds: 1),
+                tween: Tween(begin: 0, end: project.progress),
+                curve: Curves.easeOutQuint,
+                builder: (context, value, _) => LinearProgressIndicator(
+                  value: value,
+                  color: _getTitleColor(project.status, context),
+                ),
               ),
             ),
-          if (project.status == ProjectStatus.completed)
-            Text(
-              'Completed',
-              style: TextStyle(
-                color: color,
-                fontWeight: FontWeight.w600,
-                fontSize: 18,
-              ),
-            ),
-          Padding(
-            padding: const EdgeInsets.only(top: 10.0),
-            child: TweenAnimationBuilder<double>(
-              duration: const Duration(seconds: 1),
-              tween: Tween(begin: 0, end: project.progress),
-              curve: Curves.easeOutQuint,
-              builder: (context, value, _) => LinearProgressIndicator(
-                value: value,
-                color: color,
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
+          ],
+        ),
+      );
 }
