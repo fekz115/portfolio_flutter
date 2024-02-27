@@ -11,34 +11,32 @@ class MainScreen extends StatelessWidget {
   });
 
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: ScreenSkeleton(
-        style: personInfo.style,
-        child: Padding(
-          padding: const EdgeInsets.all(20.0),
-          child: SizedBox(
-            width: double.infinity,
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                const InfoWidget(
-                  personInfo: personInfo,
-                ),
-                if (personInfo.specialties != null &&
-                    personInfo.specialties!.isNotEmpty)
-                  SpecialitiesWidget(
-                    specialities: personInfo.specialties!,
+  Widget build(BuildContext context) => Scaffold(
+        body: ScreenSkeleton(
+          style: personInfo.style,
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: SizedBox(
+              width: double.infinity,
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  const InfoWidget(
+                    personInfo: personInfo,
                   ),
-                const SizedBox(
-                  height: 15,
-                ),
-                const LinksWidget(),
-              ],
+                  if (personInfo.specialties != null &&
+                      personInfo.specialties!.isNotEmpty)
+                    SpecialitiesWidget(
+                      specialities: personInfo.specialties!,
+                    ),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  const LinksWidget(),
+                ],
+              ),
             ),
           ),
         ),
-      ),
-    );
-  }
+      );
 }

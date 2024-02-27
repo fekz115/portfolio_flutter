@@ -12,39 +12,37 @@ class SpecialitiesWidget extends StatelessWidget {
   final List<Speciality> specialities;
 
   @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Padding(
-          padding: const EdgeInsets.only(
-            top: 20,
-            bottom: 10,
+  Widget build(BuildContext context) => Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(
+              top: 20,
+              bottom: 10,
+            ),
+            child: Text(
+              'You wanna see me as:',
+              style: Theme.of(context).textTheme.headlineSmall,
+            ),
           ),
-          child: Text(
-            'You wanna see me as:',
-            style: Theme.of(context).textTheme.headlineSmall,
-          ),
-        ),
-        Wrap(
-          children: specialities
-              .map(
-                (e) => SpecialityCard(
-                  name: e.name,
-                  description: e.description,
-                  onClick: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (BuildContext context) => SpecialityScreen(
-                          speciality: e,
+          Wrap(
+            children: specialities
+                .map(
+                  (e) => SpecialityCard(
+                    name: e.name,
+                    description: e.description,
+                    onClick: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (BuildContext context) => SpecialityScreen(
+                            speciality: e,
+                          ),
                         ),
-                      ),
-                    );
-                  },
-                ),
-              )
-              .toList(),
-        ),
-      ],
-    );
-  }
+                      );
+                    },
+                  ),
+                )
+                .toList(),
+          ),
+        ],
+      );
 }

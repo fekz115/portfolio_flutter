@@ -32,13 +32,11 @@ class _MyAppState extends State<MyApp> {
   }
 
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: '${personInfo.firstName} ${personInfo.lastName}',
-      home: const MainScreen(),
-      themeMode: themeManager.themeMode,
-      theme: ThemeData.light(),
-      darkTheme: ThemeData.dark(),
-    );
-  }
+  Widget build(BuildContext context) => MaterialApp(
+        title: '${personInfo.firstName} ${personInfo.lastName}',
+        home: const MainScreen(),
+        themeMode: themeManager.themeMode,
+        theme: ThemeData.light(),
+        darkTheme: ThemeData.dark(),
+      );
 }

@@ -11,18 +11,16 @@ class InfoItemWidget extends StatelessWidget {
   final String value;
 
   @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Text(
-          '$name:',
-          style: const TextStyle(
-            fontWeight: FontWeight.w600,
+  Widget build(BuildContext context) => Row(
+        children: [
+          Text(
+            '$name:',
+            style: const TextStyle(
+              fontWeight: FontWeight.w600,
+            ),
           ),
-        ),
-        const Spacer(),
-        Text(value),
-      ],
-    );
-  }
+          const Spacer(),
+          Text(value),
+        ],
+      );
 }

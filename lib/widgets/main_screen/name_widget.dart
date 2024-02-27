@@ -11,13 +11,11 @@ class NameWidget extends StatelessWidget {
   final String lastName;
 
   @override
-  Widget build(BuildContext context) {
-    return Text(
-      '$firstName $lastName',
-      style: const TextStyle(
-        fontWeight: FontWeight.w600,
-        fontSize: 20,
-      ),
-    );
-  }
+  Widget build(BuildContext context) => Text(
+        '$firstName $lastName',
+        style: const TextStyle(
+          fontWeight: FontWeight.w600,
+          fontSize: 20,
+        ),
+      );
 }

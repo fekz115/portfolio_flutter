@@ -9,22 +9,20 @@ class FeatureWidget extends StatelessWidget {
   final String value;
 
   @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        const Icon(
-          Icons.star_border,
-        ),
-        const SizedBox(
-          width: 4,
-        ),
-        Flexible(
-          child: Text(
-            value,
-            style: Theme.of(context).textTheme.titleSmall,
+  Widget build(BuildContext context) => Row(
+        children: [
+          const Icon(
+            Icons.star_border,
           ),
-        ),
-      ],
-    );
-  }
+          const SizedBox(
+            width: 4,
+          ),
+          Flexible(
+            child: Text(
+              value,
+              style: Theme.of(context).textTheme.titleSmall,
+            ),
+          ),
+        ],
+      );
 }

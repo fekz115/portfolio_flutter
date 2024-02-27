@@ -11,28 +11,24 @@ class SkillsWidget extends StatelessWidget {
   final List<Skill> skills;
 
   @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        const Divider(),
-        const Text(
-          'Skills:',
-          style: TextStyle(
-            fontWeight: FontWeight.w600,
-            fontSize: 16,
+  Widget build(BuildContext context) => Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          const Divider(),
+          const Text(
+            'Skills:',
+            style: TextStyle(
+              fontWeight: FontWeight.w600,
+              fontSize: 16,
+            ),
           ),
-        ),
-        ...skills
-            .map(
-              (skill) => SkillWidget(
-                name: skill.name,
-                value: skill.value,
-              ),
-            )
-            ,
-      ],
-    );
-  }
+          ...skills.map(
+            (skill) => SkillWidget(
+              name: skill.name,
+              value: skill.value,
+            ),
+          ),
+        ],
+      );
 }
