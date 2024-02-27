@@ -94,7 +94,7 @@ const personInfo = PersonInfo(
           name: '3.18 CAF kernel vince',
           description:
               'Based on OEM-commit for LA.UM.6.6.r1 and will be used for 4.9 port and Ubuntu Touch',
-          status: ProjectStatus.inDevelopment,
+          status: ProjectStatus.abandoned,
           progress: 0.9,
           features: [
             ProjectFeature(
@@ -109,6 +109,59 @@ const personInfo = PersonInfo(
             ProjectFeature(
               value:
                   'Device-specific drivers and dts splitted by commits and updated',
+            ),
+          ],
+        ),
+        Project(
+          name: 'Mainline kernel for vince',
+          description: 'Attempt to port mainline kernel to xiaomi-vince',
+          status: ProjectStatus.completed,
+          progress: 1.0,
+          features: [
+            ProjectFeature(
+              value: 'Initial bringup for vince',
+            ),
+            ProjectFeature(
+              value:
+                  'Written from scratch als/ps driver (ltr579) based on datasheet',
+            ),
+            ProjectFeature(
+              value: 'Fixed magnetometer driver',
+            ),
+          ],
+        ),
+        Project(
+          name: 'Mainline kernel for libra',
+          description: 'Attempt to port mainline kernel to xiaomi-libra',
+          status: ProjectStatus.abandoned,
+          progress: 0.7,
+          features: [
+            ProjectFeature(
+              value: 'Lk2nd bringup',
+            ),
+            ProjectFeature(
+              value:
+                  "msm8994/2 firmware doesn't support booting kernels using psci, so I created pull request in msm8916-mainline/lk2nd that booting kernels for 8994/2 using downstream smp code and sends spin-tables to kernel",
+            ),
+          ],
+        ),
+        Project(
+          name: 'Mainline kernel for Spacewar',
+          description: 'Attempt to port mainline kernel to nothing-Spacewar',
+          status: ProjectStatus.inDevelopment,
+          progress: 0.6,
+          features: [
+            ProjectFeature(
+              value: 'Initial bringup for SoC and device',
+            ),
+            ProjectFeature(
+              value: 'Added gpu(a642l) support to mainline',
+            ),
+            ProjectFeature(
+              value: 'Added full panel support',
+            ),
+            ProjectFeature(
+              value: 'Ported downstream touchscreen driver to mainline',
             ),
           ],
         ),
@@ -236,6 +289,44 @@ const personInfo = PersonInfo(
           ],
         ),
         Project(
+          name: 'Esh derevenskoe(Ешь деревенское)',
+          description:
+              'The project where I was teamlead for 2 years(2021-2023)',
+          link: 'https://esh-derevenskoe.ru/?app',
+          status: ProjectStatus.completed,
+          progress: 1.0,
+          features: [
+            ProjectFeature(
+              value: 'Analytics',
+            ),
+            ProjectFeature(
+              value: 'Deep links',
+            ),
+            ProjectFeature(
+              value: 'Push notifications',
+            ),
+            ProjectFeature(
+              value: 'All kind of tests(except golden)',
+            ),
+            ProjectFeature(
+              value: 'BLoC-based architecture',
+            ),
+            ProjectFeature(
+              value: 'Firebase remote config for feature-toggle',
+            ),
+            ProjectFeature(
+              value:
+                  'Published to 5 markets(AppStore, Google Play, Xiaomi GetApps, Huawei AppGallery, Rustore)',
+            ),
+            ProjectFeature(
+              value: 'CI/CD using codemagic',
+            ),
+            ProjectFeature(
+              value: 'Mindbox integration',
+            ),
+          ],
+        ),
+        Project(
           name: 'Whelm',
           description:
               'My statemanagement library, it is The Elm Architecture implementation on Flutter.',
@@ -265,8 +356,7 @@ const personInfo = PersonInfo(
         ),
         Project(
           name: 'Inspector App (ЕИС ОАТИ)',
-          description:
-              'This app is for internal Moscow landscaping service. This project is my recent work.',
+          description: 'This app is for internal Moscow landscaping service.',
           status: ProjectStatus.completed,
           progress: 1,
           features: [
