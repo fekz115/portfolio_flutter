@@ -3,26 +3,27 @@ name: Flutter CI
 on:
   push:
     branches:
-    - main
+      - main
   workflow_dispatch:
-    
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Init evn
-      uses: subosito/flutter-action@v1
-      with:
-        channel: 'stable'
-    - name: Build
-      run: |
-        flutter pub get
-        flutter build web
-    - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@4.1.5
-      with:
-        branch: main
-        folder: build/web
-        token: ${{ secrets.DEPLOY_TOKEN }}
-        repository-name: fekz115/fekz115.github.io
+      - uses: actions/checkout@v3
+      - name: Init evn
+        uses: subosito/flutter-action@v2
+        with:
+          channel: "stable"
+      - name: Build
+        run: |
+          flutter clean
+          flutter pub get
+          flutter build web --release
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: main
+          folder: build/web
+          token: ${{ secrets.DEPLOY_TOKEN }}
+          repository-name: fekz115/fekz115.github.io
